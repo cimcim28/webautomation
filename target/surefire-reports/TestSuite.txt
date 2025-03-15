@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 2, Time elapsed: 55.36 s <<< FAILURE! - in TestSuite
+createOrder(automation.StandAloneTesNGImpl2Test)  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+	at automation.StandAloneTesNGImpl2Test.createOrder(StandAloneTesNGImpl2Test.java:48)
+
+tearDown(automation.StandAloneTesNGImpl2Test)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
+	at automation.StandAloneTesNGImpl2Test.tearDown(StandAloneTesNGImpl2Test.java:130)
+
+setUp(automation.StandAloneTesNGImplTest)  Time elapsed: 3.882 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=134.0.6998.89)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.7.4', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ec09cea18df8f24b53bbd3e1ecf6b017, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: /var/folders/hj/7k5gx0cs4qv...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54994/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ec09cea18df8f24b53bbd3e1ecf6b017
+	at automation.StandAloneTesNGImplTest.setUp(StandAloneTesNGImplTest.java:39)
+

@@ -1,2 +1,6 @@
 /Users/adminjds/afteroffice/webautomationprisma/src/test/java/automation/StandAloneTesNGImpl2Test.java
 /Users/adminjds/afteroffice/webautomationprisma/src/test/java/automation/StandAloneTesNGImplTest.java
+/Users/adminjds/afteroffice/webautomationprisma/src/test/java/components/BaseTest.java
+/Users/adminjds/afteroffice/webautomationprisma/src/test/java/hook/Hooks.java
+/Users/adminjds/afteroffice/webautomationprisma/src/test/java/runners/TestRunner.java
+/Users/adminjds/afteroffice/webautomationprisma/src/test/java/stepdefinitions/StepDefenitionsImpl.java

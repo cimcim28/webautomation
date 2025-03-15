@@ -1,2 +1,6 @@
-automation/StandAloneTesNGImpl2Test.class
 automation/StandAloneTesNGImplTest.class
+runners/TestRunner.class
+hook/Hooks.class
+stepdefinitions/StepDefenitionsImpl.class
+automation/StandAloneTesNGImpl2Test.class
+components/BaseTest.class

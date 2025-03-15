@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="42.671" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-15T13:37:53.955909Z">
+<testcase classname="Purchase the order from ecommerce" name="Create Order Positive Case - #1.1" time="14.891">
+<system-out><![CDATA[
+Given Buyer landing to ecommerce............................................passed
+Given Buyer logged to website...............................................passed
+Given Buyer logged to website email simanjuntakalbert57@gmail.com and password XBf@rWNvByn!#K8.passed
+When Buyer add product ZARA COAT 3 to Cart..................................passed
+And Buyer checkout product ZARA COAT 3......................................passed
+And Buyer place order Indonesia.............................................passed
+Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER..passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchase the order from ecommerce" name="Create Order Positive Case - #1.2" time="14.246">
+<system-out><![CDATA[
+Given Buyer landing to ecommerce............................................passed
+Given Buyer logged to website...............................................passed
+Given Buyer logged to website email simanjuntakalbert57@gmail.com and password XBf@rWNvByn!#K8.passed
+When Buyer add product ZARA COAT 3 to Cart..................................passed
+And Buyer checkout product ZARA COAT 3......................................passed
+And Buyer place order Indonesia.............................................passed
+Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER..passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchase the order from ecommerce" name="Create Order Positive Case1 - #1.1" time="13.185">
+<system-out><![CDATA[
+Given Buyer landing to ecommerce............................................passed
+Given Buyer logged to website email simanjuntakalbert57@gmail.com and password XBf@rWNvByn!#K8.passed
+When Buyer add product ZARA COAT 3 to Cart..................................passed
+And Buyer checkout product ZARA COAT 3......................................passed
+And Buyer place order Indonesia.............................................passed
+Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER..passed
+]]></system-out>
+</testcase>
+</testsuite>
