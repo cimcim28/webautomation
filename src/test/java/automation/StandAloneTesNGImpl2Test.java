@@ -18,6 +18,8 @@ import org.testng.annotations.Test;
 
 import com.webautomation.pageobjects.LandingPage;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class StandAloneTesNGImpl2Test {
     /*
      * Annotasi
@@ -30,9 +32,8 @@ public class StandAloneTesNGImpl2Test {
     @BeforeMethod
     public void setUp(){
         //Setup Driver
-        System.setProperty("webdriver.chrome.driver", "/Users/bytedance/CourseQAAutomation/Web Automation/chromedriver");
-
-        driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup(); // Automatically manages chromedriver
+        WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/client");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }

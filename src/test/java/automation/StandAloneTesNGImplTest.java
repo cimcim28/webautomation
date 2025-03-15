@@ -13,6 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.webautomation.pageobjects.CartPage;
+import com.webautomation.pageobjects.ConfirmationPage;
 import com.webautomation.pageobjects.LandingPage;
 import com.webautomation.pageobjects.OrderPage;
 import com.webautomation.pageobjects.ProductListPage;
@@ -20,25 +21,24 @@ import com.webautomation.pageobjects.ProductListPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StandAloneTesNGImplTest {
-
     /*
      * Annotasi
      * dataprovider
      * Running testng
      */
 
-     public WebDriver driver;
-
+    public WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
-         WebDriverManager.chromedriver().setup(); // Automatically manages chromedriver
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
+        // Setup Driver
+        WebDriverManager.chromedriver().setup();
+        this.driver = new ChromeDriver();  // Perbaikan: Gunakan variabel instance
+        driver.get("https://rahulshettyacademy.com/client");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
-    
+
     @Test(dataProvider = "dataTestMapping")
     public void createOrder(HashMap<String, String> input) throws InterruptedException{
         LandingPage landingPage = new LandingPage(driver);
@@ -61,16 +61,16 @@ public class StandAloneTesNGImplTest {
         orderPage.submitOrder();
         
         ConfirmationPage confirmationPage = new ConfirmationPage(driver);
-
         String confirmationText = confirmationPage.getConfirmationPage();
 
         Assert.assertEquals(confirmationText, "THANKYOU FOR THE ORDER.");
-        
     }
 
     @AfterMethod
     public void tearDown(){
-        driver.close();
+        if (driver != null) {
+            driver.quit(); // Perbaikan: Menggunakan quit() agar Chrome benar-benar tertutup
+        }
     }
 
     @DataProvider
@@ -80,10 +80,9 @@ public class StandAloneTesNGImplTest {
         };
     }
 
-    //Mapping
     @DataProvider
     public Object[][] dataTestMapping(){
-        HashMap<String, String> map = new HashMap<String, String>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("userEmail", "simanjuntakalbert57@gmail.com");
         map.put("password", "XBf@rWNvByn!#K8");
         map.put("productName", "ZARA COAT 3");
