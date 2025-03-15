@@ -1,6 +1,13 @@
 com/webautomation/SeleniumIntro.class
+com/webautomation/pageobjects/LandingPage.class
 com/webautomation/locator/HandleWindow.class
-com/webautomation/locator/Alert.class
-com/webautomation/locator/LocatorPractice.class
+com/webautomation/pageobjects/OrderPage.class
 com/webautomation/Main.class
+com/webautomation/pageobjects/ConfirmationPage.class
+com/webautomation/abstractcomponents/AbstractComponent.class
+com/webautomation/locator/LocatorPractice.class
+com/webautomation/pageobjects/CartPage.class
+com/webautomation/locator/Alert.class
+com/webautomation/pageobjects/ProductListPage.class
+com/webautomation/locator/TaskSauceDemo.class
 com/webautomation/locator/TaskLocator.class

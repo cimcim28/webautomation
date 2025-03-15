@@ -6,8 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ConfirmationPage {
+import com.webautomation.abstractcomponents.AbstractComponent;
 
+public class ConfirmationPage extends AbstractComponent{
     WebDriver driver;   
 
     public ConfirmationPage(WebDriver driver){
@@ -25,5 +26,4 @@ public class ConfirmationPage {
         visibilityOfElementLocated(elementHeroText);
         return confirmationPage.getText();
     }
-
 }

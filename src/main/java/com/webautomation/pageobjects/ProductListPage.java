@@ -8,17 +8,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductListPage {
+import com.webautomation.abstractcomponents.AbstractComponent;
 
+public class ProductListPage extends AbstractComponent {
     WebDriver driver;
     WebElement product;
 
     public ProductListPage(WebDriver driver){
-        // super(driver);
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
     @FindBy(css = ".mb-3")
     List<WebElement> listProducts;
@@ -26,6 +26,7 @@ public class ProductListPage {
     By cartButton = By.xpath("//div[@class='card-body']//child::button//child::i[@class='fa fa-shopping-cart']");
     By titleProduct = By.cssSelector("b");
     By listElement = By.cssSelector(".mb-3");
+    By toaster = By.cssSelector("toast-container");
 
     public List<WebElement> getProductList(){
         return listProducts;
@@ -45,5 +46,4 @@ public class ProductListPage {
         // visibilityOfElementLocated(toaster);
         Thread.sleep(2000);
     }
-
 }

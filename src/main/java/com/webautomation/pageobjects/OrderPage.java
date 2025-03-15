@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import com.webautomation.abstractcomponents.AbstractComponent;
 
-public class OrderPage {
+public class OrderPage extends AbstractComponent {
     WebDriver driver;   
 
     public OrderPage(WebDriver driver){
@@ -20,7 +20,7 @@ public class OrderPage {
         PageFactory.initElements(driver, this);
     }
 
-     @FindBy(css = "[placeholder = 'Select Country']")
+    @FindBy(css = "[placeholder = 'Select Country']")
     WebElement selectCountry;
 
     @FindBy(xpath = "//span[@class='ng-star-inserted']")
@@ -46,5 +46,4 @@ public class OrderPage {
     public void submitOrder(){
         placeOrderBtn.click();
     }
-
 }
